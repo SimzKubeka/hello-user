@@ -1,7 +1,9 @@
 import { Router } from "express";
 import indexPage from "./pages/index";
-import usersService from "./services/users";
 
 export const router = Router()
   .get("/", indexPage)
-  .get("/services/users", usersService);
+  .get("/about", (req, res) => res.send("About page"))
+  .get("/services", (req, res) => res.send("Services page"))
+  .get("/contact-us", (req, res) => res.send("Contact page"));
+

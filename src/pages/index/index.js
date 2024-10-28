@@ -1,5 +1,7 @@
 import template from "./template.marko";
 
 export default (req, res) => {
-  res.marko(template, {});
+  const name = req.query.name || "World";  // Get name from query param or default to "World"
+  console.log("Name received:", name);      
+  res.marko(template, { name });
 };
