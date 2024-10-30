@@ -10,6 +10,7 @@ console.time("Start");
 const app = express()
   .use(compressionMiddleware()) // Enable gzip compression for all HTTP responses.
   .use(markoMiddleware());
+  
 
 if (NODE_ENV === devEnv) {
   const { createServer } = await import("vite");

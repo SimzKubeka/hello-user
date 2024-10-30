@@ -15,32 +15,13 @@
 
   <!-- Greeting displays only if name is present -->
   <if(input.name)>
-  <div>
-    <h2>Hello, ${input.name}!</h2>
-    <p>Thanks for visiting my app.</p>
-    <form action="/" method="GET">
-      <button type="submit">Say Hi Again</button>
-    </form>
-  </div>
+    <div>
+      <h2>Hello, ${input.name}!</h2>
+      <p>Thanks for visiting my app.</p>
+      <form action="/" method="GET">
+        <button type="submit">Say Hi Again</button>
+      </form>
+    </div>
   </if>
 
-  <script>
-    function validateInput() {
-      e.preventDefault();
-      const nameField = document.getElementById("name");
-      const errorMessage = document.getElementById("error-message");
-      const greetingForm = document.getElementById("greetingForm");
-      const nameRegex = /^[a-zA-Z\s]+$/;
-
-      if (!nameRegex.test(nameField.value)) {
-        errorMessage.style.display = "block";
-        return false;
-      }
-
-      errorMessage.style.display = "none";
-      greetingForm.style.display = "none";
-      alert(`Hello, ${nameInput}!`);
-      return true;
-    }
-  </script>
 </div>

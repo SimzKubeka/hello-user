@@ -3,7 +3,7 @@
   --light-color: #a9d1ec;
   --dark-color: #123851;
 
-  --link-color: --medium-color;
+  --link-color: var(--medium-color);
 
   --font-color: #333;
   --font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -16,20 +16,67 @@
   --button-secondary-fg: #fff;
 }
 
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--font-color);
-  padding: 0;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
+  background-color: #AFE1AF;
 }
 
 .container {
-  margin: 5% 25%;
-  width: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Footer styles */
+.app-footer {
+  background-color: #f6f6f6;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content nav {
+  margin-top: 10px;
+}
+
+.footer-content nav a {
+  color: var(--link-color);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-content nav a:hover {
+  text-decoration: underline;
+}
+
+/* Rest of your styles */
+* {
+  box-sizing: border-box;
 }
 
 button::-moz-focus-inner,
